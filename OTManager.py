@@ -73,6 +73,9 @@ class OptimalTouring():
 	def play(self):
 		# print(self.moves_by_day) -> check the sites visited on a day
 		for locations in self.moves_by_day:
+			if not locations:
+				self.day +=1
+				continue
 			self.day += 1 # since day starts at 1 in this game but enumerate starts at 0
 			curr_time = 0 # in minutes
 			# if self.day > 3: break -> if input is in correct format should not need this statement
